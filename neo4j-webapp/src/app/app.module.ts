@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import {MatInputModule} from '@angular/material';
+import {MatInputModule, MatButtonModule} from '@angular/material';
 import { AppComponent } from './app.component';
 
 /*Apollo modules */
@@ -25,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     HttpLinkModule,
     BrowserAnimationsModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

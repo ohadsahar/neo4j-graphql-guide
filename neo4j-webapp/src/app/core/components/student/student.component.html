@@ -15,10 +15,16 @@
   <mat-form-field class="example-full-width">
     <input matInput type="text" placeholder="Enter student teacher name" name="age" [(ngModel)]="student.teacher">
   </mat-form-field>
-  <button (click)="createStudent()">Add new student</button>
+  <button mat-raised-button color="primary" (click)="createStudent()">Add new student</button>
 </form>
-
-<div *ngFor="let student of students">
-  {{student?.name}}
+<div class="students-section">
+  <h1>Students:</h1>
+  <div *ngFor="let student of students">
+    {{student?.name}}
+    {{student?.lastname}}
+    {{student?.age}}
+    {{student?.teacher}}
+  </div>
 </div>
+
 <hr>
