@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 import * as query from '../core/components/teacher/teacher.query';
+import { TeacherInterface } from '../shared/models/teacher.model';
 
 @Injectable({ providedIn: 'root' })
 export class TeacherService {
@@ -16,8 +17,8 @@ export class TeacherService {
       .valueChanges;
   }
 
-  createTeacher() {
-    return this.apollo.mutate<any>({ mutation: query.createTeacher() });
+  createTeacher(teacherData: TeacherInterface) {
+    return this.apollo.mutate<any>({ mutation: query.createTeacher(teacherData) });
   }
 
   updateTeacher(id: string) {

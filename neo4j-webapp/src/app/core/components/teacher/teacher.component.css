@@ -1,18 +1,18 @@
 .teacher-section {
   text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
   padding: 20px;
 }
 
 .teacher-section .mat-raised-button {
-
-
   margin-left: 1%;
 }
-
+.teacher-form{
+  margin: auto;
+  display: grid;
+}
 h1 {
-
   text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }

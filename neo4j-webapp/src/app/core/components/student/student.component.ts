@@ -25,7 +25,6 @@ export class StudentComponent implements OnInit {
     });
   }
   createStudent() {
-    console.log(this.student);
     const dataStudent = {id: null, name: this.student.name, lastname: this.student.lastname,
     age: this.student.age, teacher: this.student.teacher};
     this.studentService.createStudent(dataStudent).subscribe(response => {

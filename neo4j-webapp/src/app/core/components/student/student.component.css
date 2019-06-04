@@ -16,6 +16,8 @@ p {
 
 
 .students-section {
+  height: 300px;
+  overflow-y: scroll;
   text-align: center;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: bold;

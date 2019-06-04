@@ -1,4 +1,20 @@
 <h1>Teachers</h1>
+<div class="teacher-form">
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" placeholder="Enter student name" name="name" [(ngModel)]="teacher.name">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" placeholder="Enter student lastname" name="lastname" [(ngModel)]="teacher.lastname">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" placeholder="Enter student age" name="age" [(ngModel)]="teacher.age">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="createTeacher()">Click to add teacher</button>
+  </form>
+</div>
 <div class="teacher-section">
   <div *ngFor="let teacher of teachers; let i = index">
     <p>#{{i+1}} {{teacher.name}} {{teacher.lastname}} {{teacher.age}}</p>
@@ -7,5 +23,4 @@
     <button mat-raised-button color="link" (click)="deleteTeacher(teacher.id)">Delete teacher</button>
     <hr>
   </div>
-  <button mat-raised-button color="primary" (click)="createTeacher()">Click to add teacher</button>
 </div>

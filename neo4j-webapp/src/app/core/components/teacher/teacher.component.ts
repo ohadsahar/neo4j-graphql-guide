@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Teacher } from '../../../types';
 import { TeacherService } from '../../../services/teacher.service';
+import { TeacherInterface } from '../../../shared/models/teacher.model';
 
 @Component({
   selector: 'app-teacher',
@@ -9,6 +10,7 @@ import { TeacherService } from '../../../services/teacher.service';
   styleUrls: ['./teacher.component.css']
 })
 export class TeacherComponent implements OnInit {
+  public teacher = new TeacherInterface(null, '', '', '' );
   teachers: Observable<Teacher[]>;
   constructor(private teacherService: TeacherService) {}
 
@@ -23,7 +25,8 @@ export class TeacherComponent implements OnInit {
   }
 
   createTeacher(): void {
-    this.teacherService.createTeacher().subscribe(response => {
+    const teacherData = {id: null, name: this.teacher.name, lastname: this.teacher.lastname, age: this.teacher.age};
+    this.teacherService.createTeacher(teacherData).subscribe(response => {
       console.log('Created user successfully!');
     });
   }

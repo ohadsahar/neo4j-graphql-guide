@@ -1,11 +1,12 @@
 import gql from 'graphql-tag';
+import { TeacherInterface } from '../../../shared/models/teacher.model';
 
 /*create query */
 
-export function createTeacher() {
+export function createTeacher(teacherData: TeacherInterface) {
   return gql`
     mutation {
-      CreateTeacher(name: "orit", lastname: "eliran", age: "27") {
+      CreateTeacher(name: "${teacherData.name}", lastname: "${teacherData.lastname}", age: "${teacherData.age}") {
         name
       }
     }
