@@ -5,10 +5,15 @@ form {
 
 }
 
+p {
+  display: inline-grid;
+}
+
 
 .example-full-width {
   width: 100%;
 }
+
 
 .students-section {
   text-align: center;

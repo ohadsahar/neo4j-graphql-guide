@@ -1,3 +1,9 @@
+<div class="students-section">
+  <h1>Students:</h1>
+  <div *ngFor="let student of students;let i = index">
+    <p>#{{i+1}} {{student?.name}} {{student?.lastname}} {{student?.age}} {{student?.teacher}}</p>
+  </div>
+</div>
 
 <form class="example-form">
   <mat-form-field class="example-full-width">
@@ -17,14 +23,6 @@
   </mat-form-field>
   <button mat-raised-button color="primary" (click)="createStudent()">Add new student</button>
 </form>
-<div class="students-section">
-  <h1>Students:</h1>
-  <div *ngFor="let student of students">
-    {{student?.name}}
-    {{student?.lastname}}
-    {{student?.age}}
-    {{student?.teacher}}
-  </div>
-</div>
+
 
 <hr>

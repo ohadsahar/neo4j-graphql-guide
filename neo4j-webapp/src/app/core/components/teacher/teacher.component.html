@@ -1,10 +1,11 @@
-<div *ngFor="let teacher of teachers">
-  <p>{{teacher.name}}</p>
-  <p>{{teacher.lastname}}</p>
-  <p>{{teacher.age}}</p>
-  <button (click)="getTeacher(teacher.id)">get teacher</button>
-  <button (click)="updateTeacher(teacher.id)">Update teacher</button>
-  <button (click)="deleteTeacher(teacher.id)">Delete teacher</button>
-  <hr>
+<h1>Teachers</h1>
+<div class="teacher-section">
+  <div *ngFor="let teacher of teachers; let i = index">
+    <p>#{{i+1}} {{teacher.name}} {{teacher.lastname}} {{teacher.age}}</p>
+    <button mat-raised-button color="primary" (click)="getTeacher(teacher.id)">get teacher</button>
+    <button mat-raised-button color="warn" (click)="updateTeacher(teacher.id)">Update teacher</button>
+    <button mat-raised-button color="link" (click)="deleteTeacher(teacher.id)">Delete teacher</button>
+    <hr>
+  </div>
+  <button mat-raised-button color="primary" (click)="createTeacher()">Click to add teacher</button>
 </div>
-<button (click)="createTeacher()">Click to add teacher</button>
