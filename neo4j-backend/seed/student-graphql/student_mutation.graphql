@@ -1,0 +1,6 @@
+type Mutation {
+
+    CreateStudent(id: ID, name: String!, lastname: String!, age: String!, teacher: String!): Student
+    UpdateStudent(id: ID, name: String!, lastname: String!, age: String!, teacher: String!): Student
+    DeleteStudent(id: ID): Student
+}

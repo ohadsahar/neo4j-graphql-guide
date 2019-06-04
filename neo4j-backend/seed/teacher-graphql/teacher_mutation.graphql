@@ -1,0 +1,10 @@
+
+type Mutation {
+  #teacher mutation
+  CreateTeacher(id: ID,name: String!,lastname: String!, age: String!): Teacher 
+  UpdateTeacher(id: ID,name: String!,lastname: String!, age: String!): Teacher 
+  DeleteTeacher(id: ID): Teacher 
+
+}
+
+ 

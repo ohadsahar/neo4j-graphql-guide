@@ -1,0 +1,10 @@
+<div *ngFor="let teacher of teachers">
+  <p>{{teacher.name}}</p>
+  <p>{{teacher.lastname}}</p>
+  <p>{{teacher.age}}</p>
+  <button (click)="getTeacher(teacher.id)">get teacher</button>
+  <button (click)="updateTeacher(teacher.id)">Update teacher</button>
+  <button (click)="deleteTeacher(teacher.id)">Delete teacher</button>
+  <hr>
+</div>
+<button (click)="createTeacher()">Click to add teacher</button>

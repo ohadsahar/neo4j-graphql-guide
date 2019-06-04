@@ -1,0 +1,5 @@
+type Query {
+  # Teacher queries
+  getAllTeachers: [Teacher] 
+  getTeacherById(id: ID): [Teacher] 
+}

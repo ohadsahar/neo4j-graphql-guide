@@ -1,0 +1,24 @@
+
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" placeholder="Enter student name" name="name" [(ngModel)]="student.name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" placeholder="Enter student lastname" name="lastname" [(ngModel)]="student.lastname">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" placeholder="Enter student age" name="age" [(ngModel)]="student.age">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" placeholder="Enter student teacher name" name="age" [(ngModel)]="student.teacher">
+  </mat-form-field>
+  <button (click)="createStudent()">Add new student</button>
+</form>
+
+<div *ngFor="let student of students">
+  {{student?.name}}
+</div>
+<hr>
